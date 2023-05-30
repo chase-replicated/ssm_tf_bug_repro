@@ -3,8 +3,9 @@ variable "test" {
 }
 
 resource "aws_ssm_parameter" "test" {
-  name      = "/test"
-  type      = "String"
-  value     = var.test
-  overwrite = true
+  name        = "/test"
+  description = "testing"
+  type        = "String"
+  value       = var.test
+  overwrite   = true
 }
